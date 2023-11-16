@@ -594,8 +594,8 @@ MonoBehaviour:
   speed: 2
   rotationSpeed: 3
   waitTime: 1
-  specificWaitTime: 10
-  currentIndex: 3
+  longerWaitTime: 4
+  specificWaitPoint: 0
   waypoints:
   - {fileID: 148100475}
   - {fileID: 1682156361}
