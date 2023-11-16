@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class NPCPatrol : MonoBehaviour
 {
-    [SerializeField] private Transform[] waypoints;
     [SerializeField] private float speed;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float waitTime;
+    [SerializeField] private float longerWaitTime;
+    [SerializeField] private float specificWaitPoint;
+    [SerializeField] private Transform[] waypoints;
 
     private int _currentWaypointIndex;
     private float _waitCounter;
-    [SerializeField] private bool _waiting;
+    private bool _waiting;
 
-    private void Update() => MoveNPC();
+    private void Update() => Move();
 
-    private void MoveNPC()
+    private void Move()
     {
-        WaitToMove();
+        if(!WaitToMove()) return;
         
         var waypoint = waypoints[_currentWaypointIndex];
         if (Vector3.Distance(transform.position, waypoint.position) < 0.01f)
@@ -37,13 +39,15 @@ public class NPCPatrol : MonoBehaviour
         }
     }
 
-    private void WaitToMove()
+    private bool WaitToMove()
     {
         if (_waiting)
         {
             _waitCounter += Time.deltaTime;
-            if(_waitCounter < waitTime) return;
-            _waiting = false;
+            if (_currentWaypointIndex == specificWaitPoint && _waitCounter < longerWaitTime) return false;
+            if(_waitCounter < waitTime) return false; 
+            _waiting = true;
         }
+        return true;
     }
 }
