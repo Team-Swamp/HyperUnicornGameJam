@@ -11,8 +11,7 @@ namespace Cooking
         private Transform WorldCanvas => GameObject.Find("WorldCanvas").transform;
         private Transform Player => GameObject.Find("PlayerObject").transform;
         private CookingBehaviour Cooking => Player.GetComponent<CookingBehaviour>();
-
-        // Start is called before the first frame update
+        
         void Start()
         {
             _hoverObjectInstance = Instantiate(hoverObject, transform.position, Quaternion.identity, WorldCanvas);
