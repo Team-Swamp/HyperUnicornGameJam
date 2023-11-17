@@ -20,10 +20,7 @@ namespace Cooking
 
         private void CheckIngredients()
         {
-            if (currentDish.ingredients.Count != _collectedIngredients.Count)
-            {
-                return;
-            }
+            if (currentDish.ingredients.Count != _collectedIngredients.Count) return;
             
             List<bool> check = new List<bool>();
             for (int i = 0; i < _collectedIngredients.Count; i++)
@@ -31,15 +28,9 @@ namespace Cooking
                 check.Add(currentDish.ingredients[i] == _collectedIngredients[i].type);
             }
 
-            if (!check.All(i => i))
-            {
-                return;
-            }
+            if (!check.All(i => i)) return;
 
-            foreach (var ingredient in _collectedIngredients)
-            {
-                PointSystem.AddPoint(ingredient.points);
-            }
+            foreach (var ingredient in _collectedIngredients) PointSystem.AddPoint(ingredient.points);
         }
     }
 }
