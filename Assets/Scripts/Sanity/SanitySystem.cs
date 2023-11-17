@@ -1,18 +1,28 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SanitySystem : MonoBehaviour
 {
-    [SerializeField] private Slider slider;
+    [SerializeField] private int maxSanity;
+    [SerializeField] private int currentSanity;
 
-    public void SetMaxSanity(int sanity)
+    [SerializeField] private SanityBarController sanityBarController;
+
+    private void Start()
     {
-        slider.maxValue = sanity;
-        slider.value = sanity;
+        currentSanity = maxSanity;
+        sanityBarController.SetMaxSanity(maxSanity);
     }
 
-    public void SetSanity(int sanity)
+    private void Update() => UpdateSanity();
+
+    private void LowerSanity(int lower)
     {
-        slider.value = sanity;
+        currentSanity -= lower;
+        sanityBarController.SetSanity(currentSanity);
+    }
+
+    private void UpdateSanity()
+    {
+        if (Input.GetKeyDown(KeyCode.F)) LowerSanity(20);
     }
 }
