@@ -30,7 +30,10 @@ namespace Cooking
 
             if (!check.All(i => i)) return;
 
-            foreach (var ingredient in _collectedIngredients) PointSystem.AddPoint(ingredient.points);
+            foreach (var ingredient in _collectedIngredients)
+            {
+                PointSystem.AddPoint(ingredient.points);
+            }
         }
     }
 }

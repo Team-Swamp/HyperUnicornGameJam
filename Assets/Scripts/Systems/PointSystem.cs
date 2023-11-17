@@ -25,8 +25,5 @@ public class PointSystem : MonoBehaviour
         SetScoreText();
     }
 
-    private void SetScoreText()
-    {
-        PointsText.text = score.ToString();
-    }
+    private void SetScoreText() => PointsText.text = score.ToString();
 }
