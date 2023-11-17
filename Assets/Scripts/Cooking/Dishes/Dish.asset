@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d7b381621ae5b4ba62f4fbb79c438f, type: 3}
   m_Name: Dish
   m_EditorClassIdentifier: 
-  ingredients: 
+  ingredients: 00000000020000000400000003000000

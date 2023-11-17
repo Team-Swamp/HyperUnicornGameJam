@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1a1c8e966bfae448bdea1a33a5fef98, type: 3}
-  m_Name: Meat
+  m_Name: Bread
   m_EditorClassIdentifier: 
-  points: 15
-  type: 0
+  points: 0
+  type: 3
