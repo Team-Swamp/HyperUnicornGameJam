@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Cooking
 {
-    public class MergingBehaviour : MonoBehaviour
+    public class CookingBehaviour : MonoBehaviour
     {
         [SerializeField] private Dish currentDish;
         private List<IngredientType> _collectedIngredients = new List<IngredientType>();

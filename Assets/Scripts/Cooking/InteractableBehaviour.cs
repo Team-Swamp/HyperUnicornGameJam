@@ -10,7 +10,7 @@ namespace Cooking
         
         private Transform WorldCanvas => GameObject.Find("WorldCanvas").transform;
         private Transform Player => GameObject.Find("PlayerObject").transform;
-        private MergingBehaviour Merging => Player.GetComponent<MergingBehaviour>();
+        private CookingBehaviour Cooking => Player.GetComponent<CookingBehaviour>();
 
         // Start is called before the first frame update
         void Start()
@@ -24,7 +24,7 @@ namespace Cooking
         {
             if (_hoverObjectInstance.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
             {
-                Merging.CollectIngredient(type);
+                Cooking.CollectIngredient(type);
             }
         }
 
