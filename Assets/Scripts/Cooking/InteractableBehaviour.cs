@@ -1,15 +1,18 @@
 using UnityEngine;
+using Cooking.Ingredients;
 
-namespace Ingredients
+namespace Cooking
 {
     public class InteractableBehaviour : MonoBehaviour
     {
         [SerializeField] private GameObject hoverObject;
         private GameObject _hoverObjectInstance;
+        [SerializeField] private Ingredient ingredient;
+        
         private Transform WorldCanvas => GameObject.Find("WorldCanvas").transform;
         private Transform Player => GameObject.Find("PlayerObject").transform;
-
-        // Start is called before the first frame update
+        private CookingBehaviour Cooking => Player.GetComponent<CookingBehaviour>();
+        
         void Start()
         {
             _hoverObjectInstance = Instantiate(hoverObject, transform.position, Quaternion.identity, WorldCanvas);
@@ -21,7 +24,7 @@ namespace Ingredients
         {
             if (_hoverObjectInstance.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
             {
-                // NOTE: add interaction
+                Cooking.CollectIngredient(ingredient);
             }
         }
 
