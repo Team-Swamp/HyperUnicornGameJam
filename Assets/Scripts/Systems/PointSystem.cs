@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using TMPro;
 
@@ -8,7 +7,13 @@ public class PointSystem : MonoBehaviour
     private int score;
 
     [SerializeField] private int multiplier;
-    
+    private TMP_Text PointsText => GameObject.Find("PointsText").GetComponent<TMP_Text>();
+
+    private void Start()
+    {
+        SetScoreText();
+    }
+
     public void AddPoint(int amount)
     {
         score += amount * multiplier;
@@ -25,6 +30,6 @@ public class PointSystem : MonoBehaviour
 
     private void SetScoreText()
     {
-        GetComponent<TextMeshProUGUI>().text = score.ToString();
+        PointsText.text = score.ToString();
     }
 }

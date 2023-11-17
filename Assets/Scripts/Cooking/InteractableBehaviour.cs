@@ -1,4 +1,5 @@
 using UnityEngine;
+using Cooking.Ingredients;
 
 namespace Cooking
 {
@@ -6,7 +7,7 @@ namespace Cooking
     {
         [SerializeField] private GameObject hoverObject;
         private GameObject _hoverObjectInstance;
-        [SerializeField] private IngredientType type;
+        [SerializeField] private Ingredient ingredient;
         
         private Transform WorldCanvas => GameObject.Find("WorldCanvas").transform;
         private Transform Player => GameObject.Find("PlayerObject").transform;
@@ -23,7 +24,7 @@ namespace Cooking
         {
             if (_hoverObjectInstance.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
             {
-                Cooking.CollectIngredient(type);
+                Cooking.CollectIngredient(ingredient);
             }
         }
 
