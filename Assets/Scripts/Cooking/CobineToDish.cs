@@ -3,23 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using Cooking;
 using Cooking.Dishes;
+using UnityEngine.UI;
+using TMPro;
 using UnityEngine;
 
 public class CobineToDish : MonoBehaviour
 {
     [SerializeField] private Dish dish;
     [SerializeField] private CookingBehaviour cookingBehaviour;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
-    private void Update()
+    private void Start()
     {
-        CompareDish();
+        scoreText.SetText("Score: 0");
     }
 
-    private void CompareDish()
-    {
+    public void CompareDish()
+    { 
         if (dish.ingredients.Count == cookingBehaviour.collectedIngredients.Count)
         {
-            Debug.Log("test");
+            TotalScore.totalScore += dish.scoreAmount;
+            Debug.Log("Score: " + TotalScore.totalScore);
+            scoreText.SetText("Score: " + TotalScore.totalScore.ToString());
         }
+
+        cookingBehaviour.collectedIngredients.Clear();
     }
 }

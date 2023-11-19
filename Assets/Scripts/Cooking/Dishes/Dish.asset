@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Dish
   m_EditorClassIdentifier: 
   ingredients: 00000000020000000400000003000000
+  scoreAmount: 40

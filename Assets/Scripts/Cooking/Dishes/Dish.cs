@@ -7,5 +7,6 @@ namespace Cooking.Dishes
     public class Dish : ScriptableObject
     {
         public List<IngredientType> ingredients;
+        public int scoreAmount;
     }
 }

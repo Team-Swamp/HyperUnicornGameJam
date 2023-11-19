@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1a1c8e966bfae448bdea1a33a5fef98, type: 3}
   m_Name: Milk
   m_EditorClassIdentifier: 
-  points: 0
+  points: 5
   type: 4
