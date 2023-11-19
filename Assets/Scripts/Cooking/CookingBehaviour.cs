@@ -9,7 +9,7 @@ namespace Cooking
     public class CookingBehaviour : MonoBehaviour
     {
         [SerializeField] private Dish currentDish;
-        private List<Ingredient> _collectedIngredients = new List<Ingredient>();
+        [SerializeField] private List<Ingredient> _collectedIngredients = new List<Ingredient>();
         private PointSystem PointSystem => GameObject.Find("PointSystem").GetComponent<PointSystem>();
 
         public void CollectIngredient(Ingredient ingredient)
