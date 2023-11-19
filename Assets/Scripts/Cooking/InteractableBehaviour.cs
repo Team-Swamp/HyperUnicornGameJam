@@ -26,7 +26,6 @@ namespace Cooking
             if (_hoverObjectInstance.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
             {
                 Cooking.CollectIngredient(ingredient);
-                //Destroy(this.gameObject);
             }
         }
 
