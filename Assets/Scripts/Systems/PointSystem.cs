@@ -7,7 +7,7 @@ public class PointSystem : MonoBehaviour
     private int score;
 
     [SerializeField] private int multiplier;
-    private TMP_Text PointsText => GameObject.Find("PointsText").GetComponent<TMP_Text>();
+    private TMP_Text PointsText => GameObject.Find("PointText").GetComponent<TMP_Text>();
 
     private void Start() => SetScoreText();
 

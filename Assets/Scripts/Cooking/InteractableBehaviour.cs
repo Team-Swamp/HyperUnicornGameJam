@@ -8,6 +8,7 @@ namespace Cooking
         [SerializeField] private GameObject hoverObject;
         private GameObject _hoverObjectInstance;
         [SerializeField] private Ingredient ingredient;
+        [SerializeField] private float distance;
         
         private Transform WorldCanvas => GameObject.Find("WorldCanvas").transform;
         private Transform Player => GameObject.Find("PlayerObject").transform;
@@ -26,12 +27,14 @@ namespace Cooking
             {
                 Cooking.CollectIngredient(ingredient);
             }
+            //Debug.Log(_hoverObjectInstance.activeSelf + " " + _hoverObjectInstance.activeInHierarchy);
         }
 
         void OnMouseEnter()
         {
-            if ((transform.position - Player.position).magnitude < 2) 
+            if ((transform.position - Player.position).magnitude < distance) 
                 _hoverObjectInstance.SetActive(true);
+            Debug.Log("Test if it hovers");
         }
 
         void OnMouseExit() => _hoverObjectInstance.SetActive(false);
