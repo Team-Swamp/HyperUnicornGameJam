@@ -27,14 +27,12 @@ namespace Cooking
             {
                 Cooking.CollectIngredient(ingredient);
             }
-            //Debug.Log(_hoverObjectInstance.activeSelf + " " + _hoverObjectInstance.activeInHierarchy);
         }
 
         void OnMouseEnter()
         {
             if ((transform.position - Player.position).magnitude < distance) 
                 _hoverObjectInstance.SetActive(true);
-            Debug.Log("Test if it hovers");
         }
 
         void OnMouseExit() => _hoverObjectInstance.SetActive(false);
