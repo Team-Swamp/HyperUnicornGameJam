@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Cobine/CobineClickable.unity
+    guid: ee1c6895140731c4ab09d9b56fb97100
   m_configObjects: {}
