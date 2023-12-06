@@ -1,5 +1,6 @@
 # HyperUnicornGameJam
 This is a unity game made for the  gamejam "Hyper Unicorn Gamejam"<br> 
+[11th of November 2023 - 20th of November 2023]
 
 Explanation of the game: Coming soon.
 
