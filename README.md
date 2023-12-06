@@ -12,7 +12,7 @@ Explanation of the game: Coming soon.
 * Ruud, musician, game designer
 
 ## Tatum
-### NPC pathfollowing
+### NPC Pathfollowing
 [NPCPatrol](Assets/Scripts/NPC/NPCPatrol.cs)<br>
 ### Sanity Bar Player
 [SanitySystem](Assets/Scripts/Sanity/SanitySystem.cs)<br>
