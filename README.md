@@ -16,6 +16,12 @@ Explanation of the game: Coming soon.
 ### Sanity Bar Player
 [SanitySystem](Assets/Scripts/Sanity/SanitySystem.cs)<br>
 [SanityBarController](Assets/Scripts/Sanity/SanityBarController.cs)<br>
+### Player Movement (Imported from a previous project)
+[PlayerMovement](Assets/Scripts/Player/Movement/PlayerMovement.cs)<br>
+[CameraController](Assets/Scripts/Player/Movement/CameraController.cs)
+### Music & Sound System (Imported from a previous project)
+[MusicController](Assets/Scripts/Framework/Music/MusicController.cs)<br>
+[SoundEffectsController](Assets/Scripts/Framework/Music/SoundEffectsController.cs)
 ### Props
 Coming soon.
 ## Mikey
